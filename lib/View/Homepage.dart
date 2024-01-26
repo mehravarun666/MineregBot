@@ -1,3 +1,4 @@
+import 'package:chitchat/View/RightDrawer.dart';
 import 'package:chitchat/View/homepagecards.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,11 +12,14 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   CardWidget homecard = CardWidget();
   String name = "Varun Mehra";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +51,7 @@ class _HomepageState extends State<Homepage> {
                           Spacer(),
                           ElevatedButton(
                             onPressed: () {
-                              // Your onTap functionality
+                              _scaffoldKey.currentState?.openEndDrawer();
                             },
                             style: ElevatedButton.styleFrom(
                               shape: CircleBorder(),
@@ -89,7 +93,7 @@ class _HomepageState extends State<Homepage> {
                               SizedBox(height: 20,),
                               Text("Chatbot Premium",style: TextStyle(fontSize: 19,color: Colors.white,fontWeight: FontWeight.bold),),
                               SizedBox(height: 5,),
-                              Text("Get Premium to unlock all \nfeatures and benefits",style: TextStyle(fontSize: 13,color: Colors.white),),
+                              Text("Get Premium to unlock all features and benefits",style: TextStyle(fontSize: 13,color: Colors.white),),
                               SizedBox(height: 20,),
                               Container(
                                 padding: EdgeInsets.all(8),
@@ -144,6 +148,7 @@ class _HomepageState extends State<Homepage> {
           ],
         ),
       ),
+      endDrawer: CustomDrawer(),
     );
   }
 }
