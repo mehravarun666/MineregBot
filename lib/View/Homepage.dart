@@ -1,4 +1,6 @@
+import 'package:chitchat/Addons/ChatbotPremium.dart';
 import 'package:chitchat/View/RightDrawer.dart';
+import 'package:chitchat/View/chatScreen.dart';
 import 'package:chitchat/View/homepagecards.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -76,49 +78,7 @@ class _HomepageState extends State<Homepage> {
         
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Card(
-                color: Colors.indigo,
-                elevation: 8,
-                child: Container(
-                  // Wrap with a container to specify height
-                  height: 210,
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(10, 10, 7, 0),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 20,),
-                              Text("Chatbot Premium",style: TextStyle(fontSize: 19,color: Colors.white,fontWeight: FontWeight.bold),),
-                              SizedBox(height: 5,),
-                              Text("Get Premium to unlock all features and benefits",style: TextStyle(fontSize: 13,color: Colors.white),),
-                              SizedBox(height: 20,),
-                              Container(
-                                padding: EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  border: Border.all(color: Colors.black, width: 1),
-                                  borderRadius: BorderRadius.circular(5)
-                                ),
-                                child: Text("Upgrade"),
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: 180,
-                          child: Lottie.asset(
-                            'assets/animation/howcanihelp.json', // Replace with your Lottie animation path
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              child: ChatbotPremiumCard(),
             ),
             Container(
               padding: EdgeInsets.all(20),
@@ -138,7 +98,9 @@ class _HomepageState extends State<Homepage> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                 homecard.Card1(),
+                 InkWell(onTap: (){
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Chatbot()));
+                 },child: homecard.Card1()),
                   homecard.Card2(),
                   homecard.Card3(),
                   homecard.Card4(),
