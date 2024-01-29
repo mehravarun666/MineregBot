@@ -27,79 +27,79 @@ class _ChatbotState extends State<Chatbot> {
     return Scaffold(
       appBar: AppBar(
         title: Text("ChatBot"),
-
       ),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Center the content vertically
-          children: [
-            messages.isEmpty
-                  ? Container(
-                child: Column(
-                    children: [
-                      Container(
-                        height: 300,
-                        child: Lottie.asset(
-                          'assets/animation/howcanihelp.json',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      SizedBox(height: 10,),
-                      Align(alignment:Alignment.center,child: Text("Ask Anything From Your Chatbot",style: TextStyle(fontSize: 20),))
-                    ],
-
-                ),
-              )
-                  : Expanded(child: MessagesScreen(messages: messages)),
-            Spacer(),
-
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 8),
-              color: Colors.indigo,
-              child: Row(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: messages.isEmpty
+                ? Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(left: 10, right: 8),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      child: Row(
-                        children: [
-                          SizedBox(width: 10), // Padding on the left side of the text field
-                          Expanded(
-                            child: TextField(
-                              controller: _controller,
-                              style: TextStyle(color: Colors.black), // Change text color
-                              decoration: InputDecoration(
-                                hintText: "Type a message...",
-                                hintStyle: TextStyle(color: Colors.grey),
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10), // Padding on the right side of the text field
-                        ],
-                      ),
+                  Container(
+                    height: 300,
+                    child: Lottie.asset(
+                      'assets/animation/howcanihelp.json',
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {
-                      sendMessage(_controller.text);
-                      _controller.clear();
-                    },
-                    icon: Icon(Icons.send_rounded, color: Colors.white),
+                  SizedBox(height: 10),
+                  Text(
+                    "Ask Anything From Your Chatbot",
+                    style: TextStyle(fontSize: 20),
                   ),
                 ],
               ),
             )
-
-          ],
-        ),
+                : MessagesScreen(messages: messages),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 8),
+            color: Colors.indigo,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: 10, right: 8, bottom: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Row(
+                      children: [
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: TextField(
+                            controller: _controller,
+                            style: TextStyle(color: Colors.black),
+                            decoration: InputDecoration(
+                              hintText: "Type a message...",
+                              hintStyle: TextStyle(color: Colors.grey),
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                      ],
+                    ),
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    sendMessage(_controller.text);
+                    _controller.clear();
+                  },
+                  icon: Icon(Icons.send_rounded, color: Colors.white),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
-
     );
+
+
   }
 
   sendMessage(String text)async{
