@@ -58,8 +58,8 @@ class _HomepageState extends State<Homepage> {
                             style: ElevatedButton.styleFrom(
                               shape: CircleBorder(),
                               elevation: 4, // Adjust the elevation as needed
-                              primary: Colors.white,
-                              onPrimary: Colors.black,
+                              backgroundColor: Colors.white,
+                              foregroundColor: Colors.black,
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
