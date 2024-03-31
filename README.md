@@ -17,7 +17,7 @@ Continuous Improvement: The project is open to contributions and enhancements fr
 
 ***
 ## Support and Feedback
-For any inquiries, feedback, or assistance regarding the Mining Industry Chatbot project, feel free to contact us at email@example.com. We value your input and strive to provide a valuable resource for miners in the industry.
+For any inquiries, feedback, or assistance regarding the Mining Industry Chatbot project, feel free to contact us at mehra.varun666@gmail.com. We value your input and strive to provide a valuable resource for miners in the industry.
 ***
 ## License
 This project is licensed under the MIT License, allowing for free use, modification, and distribution of the software. See the LICENSE file for more details.
