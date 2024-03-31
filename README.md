@@ -5,6 +5,8 @@ Welcome to the Mining Industry Chatbot repository! This Flutter project aims to 
 
 **![1](https://github.com/mehravarun666/MineregBot/assets/108194170/bbe097a1-d783-4664-93fe-d85eed0cf93d)**
 
+***
+
 ## Features
 Industry-specific Knowledge: Tailored to cater to the unique needs of miners, the chatbot offers comprehensive information on mining regulations, safety standards, and industry-specific guidelines.
 Interactive Chat Interface: Utilizing an intuitive chatting interface, miners can easily engage with the chatbot, asking questions and receiving prompt responses in real-time.
@@ -13,8 +15,9 @@ Continuous Improvement: The project is open to contributions and enhancements fr
 
 ![2](https://github.com/mehravarun666/MineregBot/assets/108194170/89aaf4a2-01d1-440f-97f5-c3c2bab30a02)
 
+***
 ## bSupport and Feedback
 For any inquiries, feedback, or assistance regarding the Mining Industry Chatbot project, feel free to contact us at email@example.com. We value your input and strive to provide a valuable resource for miners in the industry.
-
+***
 ## License
 This project is licensed under the MIT License, allowing for free use, modification, and distribution of the software. See the LICENSE file for more details.
