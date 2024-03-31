@@ -1,6 +1,7 @@
 # chitchat
 
-chating app from flutter
+## Overview
+Welcome to the Mining Industry Chatbot repository! This Flutter project aims to provide miners with a dedicated chatbot tailored to address their queries and concerns within the mining industry. Designed specifically to assist miners in understanding their rights and regulatory acts, this chatbot serves as a reliable resource for accessing essential information pertaining to safety protocols, regulations, and best practices.
 
 
 **![1](https://github.com/mehravarun666/MineregBot/assets/108194170/bbe097a1-d783-4664-93fe-d85eed0cf93d)**
